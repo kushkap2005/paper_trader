@@ -1,0 +1,12 @@
+{
+  "name": "paper-trader",
+  "version": "1.0.0",
+  "description": "Paper trading app — React + TypeScript frontend, Node/Express backend, SQLite",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:backend": "npm run build --prefix backend"
+  }
+}

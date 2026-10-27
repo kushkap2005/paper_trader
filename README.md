@@ -172,7 +172,7 @@ curl http://localhost:3001/api/trades
 - **SQLite via better-sqlite3**: synchronous API fits Express's request/response model well; no async DB boilerplate needed
 - **Server-side API key**: Finnhub key never touches the frontend — it's fetched server-side and only the processed price is returned
 - **15-second quote cache**: prevents hammering the free-tier Finnhub API when multiple requests come in quickly
-- **Shared TypeScript interfaces**: `types.ts` is mirrored in both `backend/src/` and `frontend/src/` — keeping them in sync is intentional and is something to mention in interviews
+- **Shared TypeScript interfaces**: `types.ts` is mirrored in both `backend/src/` and `frontend/src/` — they are kept in sync manually, which is a known trade-off of not using a shared package
 - **Weighted average buy price**: when buying more of a stock you already own, the avg price is correctly recalculated
 - **Proper HTTP status codes**: 201 for successful trades, 400 for validation/business logic errors, 404 for bad symbols
 
